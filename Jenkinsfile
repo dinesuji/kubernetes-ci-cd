@@ -8,6 +8,8 @@ node {
 
     tag = readFile('commit-id').replace("\n", "").replace("\r", "")
     appName = "hello-kenzan"
+    registry = "hub.docker.com"
+    registrycredential = 'dockercredential'
     imageName = "mgsgomu/${appName}:${tag}"
     env.BUILDIMG=imageName
 
