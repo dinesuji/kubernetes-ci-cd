@@ -8,8 +8,6 @@ node {
 
     tag = readFile('commit-id').replace("\n", "").replace("\r", "")
     appName = "hello-kenzan"
-    registry = "mgsgomu/$appName"
-    registrycredential = 'dockercredentials'
     imageName = "mgsgomu/${appName}:${tag}"
     env.BUILDIMG=imageName
 
@@ -19,7 +17,7 @@ node {
     
     stage "Push"
 
-        sh "docker push ${imageName}"
+        sh "docker push ${imageName}" , registrycredentials: 'dockercredentials'
 
     stage "Deploy"
 
