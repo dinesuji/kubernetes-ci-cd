@@ -8,8 +8,7 @@ node {
 
     tag = readFile('commit-id').replace("\n", "").replace("\r", "")
     appName = "hello-kenzan"
-    registryHost = "localhost:30400/"
-    imageName = "${registryHost}${appName}:${tag}"
+    imageName = "mgsgomu/${appName}:${tag}"
     env.BUILDIMG=imageName
 
     stage "Build"
