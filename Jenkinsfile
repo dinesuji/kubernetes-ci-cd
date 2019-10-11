@@ -8,7 +8,7 @@ node {
 
     tag = readFile('commit-id').replace("\n", "").replace("\r", "")
     appName = "hello-kenzan"
-    imageName = "mgsgomu/${appName}:${tag}", 'dockercredentials'
+    imageName = "mgsgomu/${appName}:${tag}"
     env.BUILDIMG=imageName
 
     stage "Build"
