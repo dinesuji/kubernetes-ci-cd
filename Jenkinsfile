@@ -21,6 +21,6 @@ node {
 
     stage "Deploy"
 
-        kubernetesDeploy configs: "applications/${appName}/k8s/today.yaml", kubeconfigId: 'kenzan_kubeconfig'
+        kubernetesDeploy configs: "applications/${appName}/k8s/deployment.yaml", kubeconfigId: 'kenzan_kubeconfig'
 
 }
